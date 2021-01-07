@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css" />
+    <title>Bethany's Pie Shop</title>
+    <style>
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-group input .input-group textarea .input-group select {
+            padding: 10px;
+            border: solid 1px #999;
+            border-radius: 2px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="images/logo.png" alt="Bethany's Pie Shop"></aside>
+        <Article>
+            <h1>Order</h1>
+            <form action="https://localhost:7071/api/post" method="POST">
+
+                <div class="input-group">
+                    <div><label for="first-name">First name</label></div>
+                    <div><input type="text" name="first-name" id="first-name" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="last-name">Last name</label></div>
+                    <div><input type="text" name="last-name" id="last-name" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="address">Address</label></div>
+                    <div><input type="text" name="address" id="address" /></div>
+                </div>
+
+                <div class="input-group">
+                    <div><label for="state">State</label></div>
+                    <div>
+                        <select name="state" id="state">
+                            <option value="" selected>[ Select one ]</option>
+                            <option value="Malabon">Malabon</option>
+                            <option value="Acacia">Acacia</option>
+                            <option value="Monumento">Monumento</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <div><label for="postal-code">Postal code</label></div>
+                        <div><input type="text" name="postal-code" id="postal-code" /></div>
+                    </div>
+
+                    <div class="input-group">
+                        <div><label for="comments">Comments</label></div>
+                        <div>
+                            <textarea name="comments" id="coments" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <input type="reset" value="Reset" />
+                        <input type="submit" value="Submit" />
+            </form>
+        </Article>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="pies.html">Pies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
